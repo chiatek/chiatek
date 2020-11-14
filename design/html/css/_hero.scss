@@ -1,0 +1,75 @@
+// hero section
+
+.hero-wrapper {
+    position: relative;
+    background: url("../images/hero-mobile.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner {
+    position: relative;
+    background: url("../images/hero-banner.jpg");
+    background-size: cover;
+    background-position: bottom left;
+    width: 100%;
+    height: 476px;
+}
+
+.hero-carousel {
+    margin-top: 12em;
+    width: 95%;
+
+    h1, h4 {
+        color: $text-light;
+    }
+}
+
+.hero-indicator {
+    margin-top: 60px;
+    text-align: center;
+
+    .indicator {
+        height: 13px;
+        width: 13px;
+        margin: .3em;
+        background: $text-light;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .indicator.active {
+        background: $primary;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-indicator {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+	.hero-wrapper {
+        background: url("../images/hero.jpg");
+        background-size: cover;
+        background-position: bottom left;
+    }
+
+    .hero-banner {
+        background: url("../images/hero-banner.jpg");
+        background-size: cover;
+        background-position: bottom left;
+    }
+
+    .hero-carousel {
+        margin-top: 16em;
+        width: 60%;
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+}

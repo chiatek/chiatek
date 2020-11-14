@@ -1,0 +1,261 @@
+// prejects
+
+.projects-wrapper {
+    background: $background3;
+}
+
+.projects {
+    margin-bottom: 125px;
+
+    .project-category {
+        ul {
+            text-align: center;
+            margin: 2em 0 2em 0;
+    
+            li {
+                display: inline-block;
+                padding: 0 8px;
+            }
+    
+            button {
+                color: $text-light;
+                font-size: 1.0em;
+            }
+    
+            button:hover, button .active {
+                color: $primary-alt;
+                cursor: pointer;
+            }
+    
+            button.active {
+                color: $primary-alt;
+            }
+        }
+    }
+    
+    .project-item {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        grid-gap: 20px;
+    
+        .item {
+            position: relative;
+            text-align: center;
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                transition: 0.5s all ease-in-out;
+                opacity: 1;
+            }
+            
+            .overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                color: $text-light;
+                opacity: 0;
+                transition: .5s ease;
+    
+                h5 {
+                    color: #aaa;
+                    margin-top: -15px;
+                }
+    
+                h3 {
+                    position: absolute;
+                    top: 40%;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+    
+            button:hover img, button:hover {
+                opacity: 0.1;
+            }
+    
+            button:hover .overlay, button:hover {
+                opacity: 1;
+            }
+        }
+    
+        .item:hover img {
+            transform: scale(1.5);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .projects {
+        .project-category {
+            ul {     
+                button {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 15% 80%;
+        grid-column-gap: 5%;
+
+        .project-category {
+            ul {
+                text-align: left;
+
+                button {
+                    text-align: left;
+                }
+
+                li {
+                    display: block;
+                    margin: .8em 0 .8em 0;
+                }
+            }
+        }
+        
+        .project-item {
+            margin-top: 3em;
+        }
+    }
+}
+
+// projects modal
+
+#projects {
+    //margin: 0 auto;
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .btn-primary {
+        width: 50%;
+        height: 50px;
+        text-align: center;
+    }
+
+    .btn-group {
+        display: block;
+        margin: auto;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .btn-group .btn-primary {
+        float: left;
+    }
+
+    .btn-group a {
+        padding: 12px 35px 15px 35px;
+    }
+
+    #image-modal, #video-modal {
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            overflow: hidden;
+            background: #000;
+            opacity: 0.8;
+        }
+    }
+
+    #image-modal {
+        .modal-content {
+            max-width: 500px;
+            height: 85%;
+        }
+
+        img {
+            width: 100%;
+            height: 65%;
+        }
+
+        .modal-container {
+            padding: 0 1em 0 1em;
+
+            p {
+                color: #a1a1a1;
+            }
+        }
+    }
+
+    #video-modal {
+        .modal-content {
+            max-width: 800px;
+            height: 90%;
+
+            iframe {
+                width: 100%;
+                height: 65%;
+                border: none;
+            }
+
+            h4 {
+                padding-top: 20px;
+                margin-bottom: 0;
+            }
+    
+            .modal-container {
+                padding: 0 1em 0 1em;
+            }
+
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+              
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+        .btn-group {
+            max-width: 800px;
+        }
+    }
+
+    .modal-content, .btn-group {  
+        -webkit-animation-name: wipe;
+        -webkit-animation-duration: 0.2s;
+        animation-name: wipe;
+        animation-duration: 0.2s;
+    }
+
+    @-webkit-keyframes wipe {
+        from {height: 0%} 
+        to {height: 80%}
+    }
+
+    @keyframes wipe {
+        from {height: 0%} 
+        to {height: 80%}
+    }
+}

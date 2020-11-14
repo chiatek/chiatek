@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$primary: #6A001D;
+$primary-hover: #4E0116;
+$text-light: #FFFFFF;
+$text-dark: #575859;
+$text-footer: #252A2B;
+$background1: #09090F;
+$background2: #0E1015;
+$background3: #111417;
+$background4: #12151B;
+$input-fill: #2E3236;
+
+@import "global";
+@import "header";
+@import "hero";
+@import "cta";
+@import "services";
+@import "projects";
+@import "features";
+@import "contact";
+@import "footer";

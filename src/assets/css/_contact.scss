@@ -1,0 +1,68 @@
+// contact
+
+.contact-wrapper {
+    background: $background3;
+}
+
+.contact {
+    margin: 40px auto;
+
+    form {
+        .form-group {
+            margin: 30px 0;
+        }
+    
+        input, textarea {
+            background: $input-fill;
+            width: 100%;
+        }
+
+        input:focus, textarea:focus, input:-webkit-autofill, textarea:-webkit-autofill {
+            background:#E8F0FE;      
+        }
+    
+        textarea {
+            height: 128px;
+            border: 3px solid $input-fill;
+            padding: 10px;
+            resize: none;
+        }
+    
+        input {
+            height: 60px;
+            border: 3px solid $input-fill;
+            padding-left: 10px;
+        }
+
+        ::placeholder, textarea, input {
+            color: rgb(97, 97, 97);
+            font-weight: bold;
+        }
+    
+        button {
+            height: 66px;
+            width: 100%;
+        }
+    }
+}
+
+#contact {
+    margin: 0 auto;
+}
+
+#contact-form {
+    position: relative;
+    margin: -20em auto 3em auto;
+}
+
+@media (min-width: 992px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 35% 55%;
+        grid-column-gap: 10%;
+    }
+
+    #contact {
+        margin-bottom: 5em;
+    }
+}

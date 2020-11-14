@@ -1,0 +1,197 @@
+// global style
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: $background1;
+    color: $text-dark;
+    font-family: "Poppins", sans-serif;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text-light;
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em
+}
+
+h5 {
+    font-size: .75em
+}
+
+h6 {
+    font-size: .5em
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: solid $primary;
+    border-width: 3px 0 0;
+    margin: -5px 85% 0 0;
+    height: 0;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    background: $primary;
+    padding: 14px 30px 14px 30px;
+    color: $text-light;
+    font-size: .9em;
+    font-weight: bold;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: $primary-hover;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    color: $text-light;
+    padding: 100px 0 20px 0;
+    font-size: 1.4em; 
+}
+
+.subtitle {
+    color: $text-light;
+    margin-bottom: 10px;
+    font-size: 1.1em; 
+}
+
+.section-summary {
+    margin-bottom: 2em;
+    line-height: 30px;
+    font-size: 1.1em;
+}
+
+.wrapper {
+    padding: 1em 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animate-down {
+    -webkit-animation-name: animate-down;
+    animation-name: animate-down;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;    
+}
+
+.animate-up {
+    -webkit-animation-name: animate-up;
+    animation-name: animate-up;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;    
+}
+
+.error {
+    margin: 10em auto;
+    text-align: center;
+}
+
+.error-code {
+    color: $text-light;
+    font-size: 4em;
+}
+
+.loading {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin: auto;
+        display: block;
+        width: 100px;
+    }
+}
+
+@keyframes animate-down {
+    from {
+        opacity: 0;
+        top: -100px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes animate-up {
+    from {
+        opacity: 0;
+        top: 100px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        padding: 1em 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-summary {
+        margin: 2em 0 3em 0;
+    }
+
+    .btn-primary {
+        padding: 15px 50px 15px 50px;
+        font-size: 1.2em;
+    }
+
+    .wrapper {
+        padding: 1em 4em;
+    }
+}

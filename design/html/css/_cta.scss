@@ -1,0 +1,33 @@
+// cta
+
+.cta-wrapper {
+    background: $background2;
+    padding: 3em 0 4.5em 0;
+}
+
+.cta {
+    margin: 0 auto;
+    max-width: 800px;
+    
+    h2 {
+        color: $text-light;
+    }
+
+    h2, p {
+        text-align: center;
+    }
+
+    .button-group {
+        text-align: center;
+    }
+
+    .button-group a {
+        margin: 3px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cta-wrapper {
+        padding: 4em 0 5.5em 0;
+    }
+}

@@ -1,0 +1,30 @@
+// services
+
+#services {
+    position: relative;
+    margin: -20em auto 3em auto;
+}
+
+#about, #services-info {
+    margin: 0 auto 5em auto;
+}
+
+@media (min-width: 768px) {
+    .about, .services, #services-info {
+        padding-bottom: 50px;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        grid-column-gap: 50px;
+        grid-row-gap: 20px;
+    }
+
+    .services, .services-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-column-gap: 50px;
+        grid-row-gap: 20px;
+    }
+}

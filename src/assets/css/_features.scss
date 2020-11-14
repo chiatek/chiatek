@@ -1,0 +1,75 @@
+// features carousel
+
+.carousel-wrapper {
+    background: url("../images/carousel-bg.png");
+    background-size: cover;
+    height: 345px;
+}
+
+.features-carousel {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 345px;
+
+    h4 {
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .image-container {
+        text-align: center;
+    
+        img {
+            width: 60px;
+            margin: 10px 10px 0 10px;
+        }
+
+        .img-lg {
+            width: 100px;
+            margin: 10px 10px 0 10px;
+        }
+
+        .img-sm {
+            width: 40px;
+            margin: 10px 10px 0 10px;
+        }
+    }
+}
+
+.features-indicator {
+    position: absolute;
+    bottom: 30%;
+    left: 48%;
+
+    .indicator {
+        height: 13px;
+        width: 13px;
+        margin: 0 .3em;
+        background: $text-light;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .indicator.active {
+        background: $text-dark;
+    }
+}
+
+@media (min-width: 600px) {
+    .carousel-wrapper {
+        height: 400px;
+    }
+
+    .features-carousel {
+        margin: 5.5em auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .features-carousel {
+        h4 {
+            font-size: 1.0em;
+        }
+    }
+}
